@@ -1,5 +1,8 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="container">
+  <div class="row my-cart">
+    <LinkTo @route="cart" class="btn btn-primary">
+      My Cart
+    </LinkTo>
+  </div>
+  {{outlet}}
+</div>

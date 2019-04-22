@@ -1,0 +1,24 @@
+<PageTitle @title="The Dark Side of The Moon" />
+
+<div class="column detail-container">
+
+	<div class="row">
+		<div class="gallery">
+			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="The Dark Side of The Moon">
+		</div>
+
+		<div class="description">
+			<p class="price">$30 USD</p>
+			<p>
+				Here is a short description
+			</p>
+			<button
+				{{on "click" (action this.cartManager.add (hash name="Dark Side of the Moon")) }} 
+				class="btn btn-primary"
+			>
+				add to cart
+			</button>
+		</div>
+	</div>
+	
+</div>

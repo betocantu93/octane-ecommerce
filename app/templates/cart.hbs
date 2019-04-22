@@ -1,0 +1,43 @@
+<PageTitle @title="My Cart" />
+
+<div class="cart-container">
+  <table class="pure-table">
+    <thead>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>Price per unit</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+	 {{#each this.cartManager.productsInCart as |productInCart|}}
+		<tr>
+			<td>{{productInCart.product.id}}</td>
+			<td>{{productInCart.product.name}}</td>
+			<td>{{productInCart.quantity}}</td>
+			<td>{{productInCart.product.price}} USD</td>
+			<td>
+				<button 
+					{{on "click" (action this.cartManager.delete productInCart)}}
+				>
+					X
+				</button>
+			</td>
+      	</tr>
+	 {{/each}}
+      
+    </tbody>
+    <tfoot>
+      <tr>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+        <td>Total</td>
+        <td>${{this.cartManager.total}}</td>
+      </tr>
+    </tfoot>
+  </table>
+  <div class="row checkout-container">
+  	<button class="btn btn-primary">checkout</button>
+  </div>
+</div>
