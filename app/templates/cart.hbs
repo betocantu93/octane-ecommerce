@@ -1,43 +1,62 @@
 <PageTitle @title="My Cart" />
 
 <div class="cart-container">
-  <table class="pure-table">
-    <thead>
-      <th>Product ID</th>
-      <th>Product Name</th>
-      <th>Quantity</th>
-      <th>Price per unit</th>
-      <th>Actions</th>
-    </thead>
-    <tbody>
-	 {{#each this.cartManager.productsInCart as |productInCart|}}
-		<tr>
-			<td>{{productInCart.product.id}}</td>
-			<td>{{productInCart.product.name}}</td>
-			<td>{{productInCart.quantity}}</td>
-			<td>{{productInCart.product.price}} USD</td>
-			<td>
-				<button 
-					{{on "click" (action this.cartManager.delete productInCart)}}
-				>
-					X
-				</button>
-			</td>
-      	</tr>
-	 {{/each}}
-      
-    </tbody>
-    <tfoot>
-      <tr>
-		  <td></td>
-		  <td></td>
-		  <td></td>
-        <td>Total</td>
-        <td>${{this.cartManager.total}}</td>
-      </tr>
-    </tfoot>
-  </table>
-  <div class="row checkout-container">
-  	<button class="btn btn-primary">checkout</button>
-  </div>
+
+  {{#if this.cartManager.productsInCart.length}}
+    <table class="pure-table centered">
+      <thead>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price per unit</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        {{#each this.cartManager.productsInCart as |productInCart|}}
+          <tr>
+            <td>{{productInCart.product.objectID}}</td>
+            <td>{{productInCart.product.brand}}: {{productInCart.product.name}}</td>
+            <td>
+
+              <button disabled={{lte productInCart.quantity 1}}
+                {{on "click" (fn this.cartManager.decrementQuantity productInCart)}}>
+                -
+              </button>
+
+              {{productInCart.quantity}}
+              <button {{on "click" (fn this.cartManager.incrementQuantity productInCart)}}>
+                +
+              </button>
+            </td>
+            <td>{{productInCart.product.price}} USD</td>
+            <td>
+              <button {{on "click" (fn this.cartManager.delete productInCart)}}>
+                X
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Total</td>
+          <td>${{this.cartManager.total}}</td>
+        </tr>
+      </tfoot>
+    </table>
+  {{else}}
+    <h2>The cart is empty.</h2>
+  {{/if}}
+
+  {{#if this.cartManager.productsInCart.length}}
+    <div class="row checkout-container">
+      <button class="btn btn-primary">checkout</button>
+    </div>
+  {{/if}}
+
+
 </div>
