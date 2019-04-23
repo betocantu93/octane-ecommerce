@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('detail');
+  this.route('detail', { path: 'detail/:product_id'});
   this.route('cart');
 });
 
