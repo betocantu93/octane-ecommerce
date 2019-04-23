@@ -1,88 +1,42 @@
-<PageTitle @title="Welcome to my Shop"/>
+<PageTitle @title="Welcome traveler" />
 
-<div class="product-grid">
-	
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	<LinkTo @route="detail">
-		<article>
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="Dark Side of the Moon">
-			<h2>Product Name</h2>
-			<p>$30 USD</p>
-			<p>Lorem Ipsum Dolor sit amed</p>
-		</article>
-	</LinkTo>
-	
-
-
+<div class="search-input-container">
+  <Input @value={{this.query}} @placeholder="What you looking for today?" class="search-input" />
 </div>
+
+<div class="tag-facets-container">
+  <ul>
+    {{#each this.listing.facets as |facet|}}
+      <Facet @facet={{facet}} @onClick={{this.toggleFacet}}
+        class={{if (in-array facet.queryParam this.facets) "active"}} />
+    {{/each}}
+  </ul>
+</div>
+<div class="product-grid">
+  {{#each this.model as |product|}}
+    <LinkTo @route="detail" @model={{product.objectID}}>
+      <article>
+        <img src={{product.artwork.firstObject}} alt={{product.name}}>
+        <h2>{{product.brand}}: {{product.name}}</h2>
+        <p>{{product.releaseYear}}</p>
+        <p>${{product.price}} USD</p>
+        {{#if product.description}}
+          <p>{{product.description}}</p>
+        {{/if}}
+      </article>
+    </LinkTo>
+  {{else}}
+    No results <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
+  {{/each}}
+</div>
+{{#if this.listing.lastResult.total}}
+  <div class="pagination">
+    <button disabled={{lte this.page 1}} {{on "click" this.back}} class="btn btn-primary">
+      back
+    </button>
+    <span>[ {{this.page}} | {{this.listing.lastResult.totalPages}} ]</span>
+    <button disabled={{gte this.page this.listing.lastResult.totalPages}} {{on "click" this.forward}} class="btn btn-primary">
+      next
+    </button>
+  </div>
+{{/if}}
