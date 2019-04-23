@@ -1,19 +1,21 @@
-<PageTitle @title="The Dark Side of The Moon" />
+<PageTitle @title={{concat this.model.brand ": " this.model.name}} />
 
 <div class="column detail-container">
-
 	<div class="row">
 		<div class="gallery">
-			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Dark_Side_of_the_Moon.png/220px-Dark_Side_of_the_Moon.png" alt="The Dark Side of The Moon">
+			<img src={{this.model.artwork.firstObject}} alt={{concat this.model.brand " - " this.model.name}}>
 		</div>
 
 		<div class="description">
-			<p class="price">$30 USD</p>
-			<p>
-				Here is a short description
-			</p>
+			<p class="price">${{this.model.price}} USD</p>
+			{{#if this.model.description}}
+				<p>
+					{{this.model.description}}
+				</p>
+			{{/if}}
+			
 			<button
-				{{on "click" (action this.cartManager.add (hash name="Dark Side of the Moon")) }} 
+				{{on "click" (action this.cartManager.add this.model 1) }} 
 				class="btn btn-primary"
 			>
 				add to cart
