@@ -1,4 +1,38 @@
 
+.tag-facets-container
+	margin-top: 5px
+	display: flex
+	ul
+		padding: 0
+		list-style-type: none
+		margin: 0
+		li
+			display: block
+			float: left
+			margin: 8px
+			padding: 10px
+			border: 1px solid black
+			cursor: pointer
+			&.active
+				background-color: black
+				color: white
+			&:hover
+				background-color: black
+				color: white
+			
+
+.search-input-container
+	@media screen and (max-width: 1030px) 
+		padding: 8px
+	.search-input
+		border: solid
+		border-top: 0
+		border-width: 1px
+		padding: 8px
+		outline: none
+		width: 100%
+		font-size: 14px
+	
 .product-grid
 	padding: 10px
 	display: flex
@@ -6,11 +40,29 @@
 	flex-wrap: wrap
 	a
 		flex: 1
-		article
-			margin-top: 10px
-			padding: 10px
-			text-align: center
-			&:hover
+		&:hover
+			img
 				-moz-box-shadow:    3px 3px 5px 6px #ccc
 				-webkit-box-shadow: 3px 3px 5px 6px #ccc
 				box-shadow:         3px 3px 5px 6px #ccc
+		article
+			h2
+				font-size: 18px
+			margin-top: 10px
+			padding: 10px
+			text-align: center
+			@media screen and (min-width: $screen-mobile) 
+				max-width: 300px
+			img
+				max-width: 200px
+				height: auto
+
+.pagination
+	display: flex
+	padding: 20px
+	align-items: center
+	justify-content: flex-end
+	@media screen and (max-width: $screen-mobile) 
+		justify-content: center
+	span
+		margin: 0 10px
