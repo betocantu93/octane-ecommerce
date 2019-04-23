@@ -1,0 +1,409 @@
+[{
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Piper at the Gates of Dawn",
+    "description": "",
+    "releaseYear": 1967,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/piper1.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "A Saucerful of Secrets",
+    "description": "",
+    "releaseYear": 1967,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/saucerful.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "More",
+    "description": "",
+    "releaseYear": 1969,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/more.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Ummagumma",
+    "releaseYear": 1969,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/umma.jpg?w=980&q=75"
+    ],
+    "description": "",
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Atom Heart Mother",
+    "description": "",
+    "releaseYear": 1970,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/atom.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Meddle",
+    "description": "",
+    "releaseYear": 1971,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/meddle.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Obscured by Clouds",
+    "description": "",
+    "releaseYear": 1972,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/obscured.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Dark Side of the Moon",
+    "description": "",
+    "releaseYear": 1973,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/dark.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Wish You Were Here",
+    "description": "",
+    "releaseYear": 1975,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/wish.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "Animals",
+    "description": "",
+    "releaseYear": 1977,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/animals.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Wall",
+    "description": "",
+    "releaseYear": 1979,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/wall.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Final Cut",
+    "description": "",
+    "releaseYear": 1983,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/final.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "A Momentary Lapse of Reason",
+    "description": "",
+    "releaseYear": 1987,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/momentary.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Division Bell",
+    "description": "",
+    "releaseYear": 1994,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/divison.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "Pink Floyd",
+    "name": "The Endless River",
+    "description": "",
+    "releaseYear": 2014,
+    "artwork": [
+      "https://townsquare.media/site/295/files/2016/10/endless.jpg?w=980&q=75"
+    ],
+    "_tags": [
+      "progressive rock",
+      "psychedelic rock",
+      "art rock"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Please Please Me",
+    "description": "",
+    "releaseYear": 1963,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/please_please_me-960x941.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "With The Beatles",
+    "description": "",
+    "releaseYear": 1963,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/with_the_beatles.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "A Hard Day's Night",
+    "description": "",
+    "releaseYear": 1964,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/hard-days-night.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Beatles For Sale",
+    "description": "",
+    "releaseYear": 1964,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/beatles-for-sale.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Help!",
+    "description": "",
+    "releaseYear": 1965,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/help.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Rubber Soul",
+    "description": "",
+    "releaseYear": 1965,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/rubber_soul.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Revolver",
+    "description": "",
+    "releaseYear": 1966,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/revolver.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Sgt Pepper's Lonely Hearts Club Band",
+    "description": "",
+    "releaseYear": 1967,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/sgt_pepper.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "The Beatles (White Album)",
+    "description": "",
+    "releaseYear": 1968,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/white_album.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Yellow Submarine",
+    "description": "",
+    "releaseYear": 1969,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/yellow_submarine.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Abbey Road",
+    "description": "",
+    "releaseYear": 1969,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/abbey_road.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Let It Be",
+    "description": "",
+    "releaseYear": 1970,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/let_it_be.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  },
+  {
+    "price": 30,
+    "brand": "The Beatles",
+    "name": "Magical Mystery Tour",
+    "description": "",
+    "releaseYear": 1976,
+    "artwork": [
+      "https://www.beatlesbible.com/wp/media/magical_mystery_tour.jpg"
+    ],
+    "_tags": [
+      "rock",
+      "pop music"
+    ]
+  }
+
+]
