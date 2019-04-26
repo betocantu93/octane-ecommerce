@@ -5,10 +5,13 @@ import {
 import {
   action
 } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class IndexController extends Controller {
   @service cartManager;
   @service listing;
+  @tracked showMore = false;
+  facetQuantityToShow = 12;
 
   queryParams = ['query', 'facets', 'page', 'pageSize'];
   query = "";
@@ -21,6 +24,12 @@ export default class IndexController extends Controller {
     this.set('query', e.target.value);
     this.set('page', 1);
   }
+
+  @action
+  toggleShowMore(e) {
+    this.showMore = !this.showMore;
+  }
+
   @action
   toggleFacet(facet) {
     let found = this.facets.find(f => f === facet.queryParam);
