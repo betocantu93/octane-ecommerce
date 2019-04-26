@@ -11,7 +11,7 @@ export default class ProductModel {
   @tracked tags = [];
   @tracked artwork = [];
   @tracked releaseYear = "";
-  @tracked objectId = "";
+  @tracked objectID = "";
 
   constructor({
     price = 0,
@@ -33,4 +33,11 @@ export default class ProductModel {
     this.artwork = artwork;
   }
 
+  get toPlainObject() {
+    let model = {};
+    Object.keys(this.constructor.prototype).forEach(key => {
+      model[key] = Array.isArray(this[key]) || typeof this[key] !== "object" ? this[key] : this[key].toPlainObject
+    });
+    return model;
+  }
 }
