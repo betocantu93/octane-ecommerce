@@ -29,7 +29,6 @@ export default class CartManagerService extends Service {
       product,
       quantity
     })
-    debugger
     let found = this.productsInCart.find(pic => pic.product.objectID === product.objectID);
     !found && (this.productsInCart = this.productsInCart.addObject(productInCart)) && this.notificationManager.notify(`${product.name} x ${quantity} added to cart!`, 3000);
     this.persistToLocalStorage();

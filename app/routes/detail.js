@@ -12,7 +12,7 @@ export default class DetailRoute extends Route {
       window.algolia.initIndex("products").search({
           facetFilters: [`objectID:${product_id}`]
         },
-        function (error, content, state) {
+        function (error, content) {
           resolve(new Product(content.hits.firstObject));
         }
       )

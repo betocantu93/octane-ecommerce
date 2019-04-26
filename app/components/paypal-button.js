@@ -43,19 +43,13 @@ export default class PaypalButtonComponent extends Component {
           this.name = details.payer.name.given_name
           this.email = details.payer.email_address
           this.total = details.purchase_units[0].amount.value
-          this.products = `<ul>${details.purchase_units[0].items.map(({sku, name, quantity, unit_amount}) => {
-				return ` < li > Product $ {
-            sku
-          } - $ {
-            name
-          }
-          X $ {
-            quantity
-          } = $$ {
-            quantity * unit_amount.value
-          } < /li>`
-        }).join(', ')
-      } < /ul>`
+					this.products = `
+						<ul>
+							${details.purchase_units[0].items.map(({sku, name, quantity, unit_amount}) => {
+									return `<li>Product ${sku} - ${name} X ${quantity} = $${quantity * unit_amount.value} </li>`}).join(', ')
+							}
+						</ul>
+					`
 
       scheduleOnce('afterRender', this, () => {
         document.formspree.submit()

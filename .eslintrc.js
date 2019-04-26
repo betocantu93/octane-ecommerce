@@ -12,6 +12,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:ember/recommended'
   ],
+  globals: {
+    'ALGOLIA_INDEXES': true,
+    'paypal': true
+  },
+  
   env: {
     browser: true
   },

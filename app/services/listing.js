@@ -32,7 +32,7 @@ export default class ListingService extends Service {
       {
         facets: ['*']
       },
-      function (error, content, state) {
+      function (error, content) {
         let facets = [];
         Object.keys(content.facets).forEach(facetKey => {
           let facet = content.facets[facetKey];
@@ -61,7 +61,7 @@ export default class ListingService extends Service {
     let results = await new Promise(resolve => {
       window.algolia.initIndex(this.currentIndex).search(
         algoliaFilters,
-        function (error, content, state) {
+        function (error, content) {
           this.lastResult.total = content.nbHits;
           this.lastResult.totalPages = content.nbPages;
           let results = content.hits.map(hit => new Product(hit));
