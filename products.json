@@ -1,5 +1,5 @@
 [{
-    "price": 30,
+    "price": "30.00",
     "brand": "Pink Floyd",
     "name": "The Piper at the Gates of Dawn",
     "description": "",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "35.00",
     "brand": "Pink Floyd",
     "name": "A Saucerful of Secrets",
     "description": "",
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "32.00",
     "brand": "Pink Floyd",
     "name": "More",
     "description": "",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "41.00",
     "brand": "Pink Floyd",
     "name": "Ummagumma",
     "releaseYear": 1969,
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "20.00",
     "brand": "Pink Floyd",
     "name": "Atom Heart Mother",
     "description": "",
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "19.00",
     "brand": "Pink Floyd",
     "name": "Meddle",
     "description": "",
@@ -89,7 +89,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "32.00",
     "brand": "Pink Floyd",
     "name": "Obscured by Clouds",
     "description": "",
@@ -104,7 +104,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "21.00",
     "brand": "Pink Floyd",
     "name": "The Dark Side of the Moon",
     "description": "",
@@ -119,7 +119,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "29.99",
     "brand": "Pink Floyd",
     "name": "Wish You Were Here",
     "description": "",
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "33.50",
     "brand": "Pink Floyd",
     "name": "Animals",
     "description": "",
@@ -149,7 +149,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "28.99",
     "brand": "Pink Floyd",
     "name": "The Wall",
     "description": "",
@@ -164,7 +164,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "49.99",
     "brand": "Pink Floyd",
     "name": "The Final Cut",
     "description": "",
@@ -179,7 +179,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "20.00",
     "brand": "Pink Floyd",
     "name": "A Momentary Lapse of Reason",
     "description": "",
@@ -194,7 +194,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "18.99",
     "brand": "Pink Floyd",
     "name": "The Division Bell",
     "description": "",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "31.20",
     "brand": "Pink Floyd",
     "name": "The Endless River",
     "description": "",
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "34.00",
     "brand": "The Beatles",
     "name": "Please Please Me",
     "description": "",
@@ -238,7 +238,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "40.30",
     "brand": "The Beatles",
     "name": "With The Beatles",
     "description": "",
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "23.50",
     "brand": "The Beatles",
     "name": "A Hard Day's Night",
     "description": "",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "49.99",
     "brand": "The Beatles",
     "name": "Beatles For Sale",
     "description": "",
@@ -280,7 +280,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "34.00",
     "brand": "The Beatles",
     "name": "Help!",
     "description": "",
@@ -294,7 +294,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "19.99",
     "brand": "The Beatles",
     "name": "Rubber Soul",
     "description": "",
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "18.50",
     "brand": "The Beatles",
     "name": "Revolver",
     "description": "",
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "40.50",
     "brand": "The Beatles",
     "name": "Sgt Pepper's Lonely Hearts Club Band",
     "description": "",
@@ -336,7 +336,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "29.99",
     "brand": "The Beatles",
     "name": "The Beatles (White Album)",
     "description": "",
@@ -350,7 +350,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "10.99",
     "brand": "The Beatles",
     "name": "Yellow Submarine",
     "description": "",
@@ -364,7 +364,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "10.99",
     "brand": "The Beatles",
     "name": "Abbey Road",
     "description": "",
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "31.40",
     "brand": "The Beatles",
     "name": "Let It Be",
     "description": "",
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "price": 30,
+    "price": "20.00",
     "brand": "The Beatles",
     "name": "Magical Mystery Tour",
     "description": "",
