@@ -26,7 +26,7 @@ export default class IndexController extends Controller {
   }
 
   @action
-  toggleShowMore(e) {
+  toggleShowMore() {
     this.showMore = !this.showMore;
   }
 

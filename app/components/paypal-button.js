@@ -50,9 +50,9 @@ export default class PaypalButtonComponent extends Component {
 							}
 						</ul>
 					`
-          this.cartManager.clear();
           scheduleOnce('afterRender', this, () => {
             document.formspree.submit()
+            this.cartManager.clear();
           })
     });
   }

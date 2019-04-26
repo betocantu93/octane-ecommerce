@@ -49,6 +49,6 @@ export default class MakeProductsRoute extends Route {
         })
       );
     })
-    console.log(JSON.stringify(products))
+    console.log(JSON.stringify(products)) // eslint-disable-line no-console
   }
 }

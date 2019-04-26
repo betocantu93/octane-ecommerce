@@ -2,8 +2,8 @@
 
 <div class="search-input-container">
   <input {{on "input" this.changeQuery}} value={{this.query}} placeholder="What you looking for today?"
-    class="search-input" />
-  <img src="logo-algolia-nebula-blue-whitespaces.svg" class={{if this.query "typing"}}>
+    class="search-input" >
+  <img src="logo-algolia-nebula-blue-whitespaces.svg" class={{if this.query "typing"}} alt="algolia logo">
 </div>
 
 <div class="tag-facets-container">
