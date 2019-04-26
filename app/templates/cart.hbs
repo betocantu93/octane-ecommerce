@@ -49,12 +49,12 @@
       </tfoot>
     </table>
   {{else}}
-    <h2>The cart is empty.</h2>
+    <p>The cart is empty, <LinkTo @route="index">have a look!</LinkTo></p>
   {{/if}}
 
   {{#if this.cartManager.productsInCart.length}}
     <div class="row checkout-container">
-      <button class="btn btn-primary">checkout</button>
+      <PaypalButton />
     </div>
   {{/if}}
 
