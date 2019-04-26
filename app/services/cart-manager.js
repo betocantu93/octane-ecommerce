@@ -1,10 +1,12 @@
-import Service from '@ember/service';
+import Service, {
+  inject as service
+} from '@ember/service';
 import {
   tracked
 } from '@glimmer/tracking';
 import {
-  Product,
-  ProductInCart
+  ProductInCart,
+  Product
 } from '../models';
 import {
   action
@@ -13,11 +15,12 @@ import {
 export default class CartManagerService extends Service {
 
   @tracked productsInCart = [];
+  @service notificationManager;
 
   get total() {
-    return this.productsInCart.reduce((total, productInCart) => {
+    return Math.round(this.productsInCart.reduce((total, productInCart) => {
       return total + (productInCart.product.price * productInCart.quantity);
-    }, 0)
+    }, 0) * 100) / 100
   }
 
   @action
@@ -26,8 +29,10 @@ export default class CartManagerService extends Service {
       product,
       quantity
     })
+    debugger
     let found = this.productsInCart.find(pic => pic.product.objectID === product.objectID);
-    !found && (this.productsInCart = this.productsInCart.addObject(productInCart));
+    !found && (this.productsInCart = this.productsInCart.addObject(productInCart)) && this.notificationManager.notify(`${product.name} x ${quantity} added to cart!`, 3000);
+    this.persistToLocalStorage();
   }
 
   @action
@@ -38,10 +43,61 @@ export default class CartManagerService extends Service {
   @action
   decrementQuantity(productInCart) {
     productInCart.quantity--;
+    this.persistToLocalStorage();
   }
   @action
   incrementQuantity(productInCart) {
     productInCart.quantity++;
+    this.persistToLocalStorage();
+  }
+
+  persistToLocalStorage() {
+    let cartToPersist = this.productsInCart.map(productInCart => productInCart.toPlainObject);
+    window.localStorage.setItem('cart', JSON.stringify(cartToPersist));
+  }
+
+  loadFromLocalStorage() {
+    let cartFromLocal = window.localStorage.getItem('cart');
+    cartFromLocal = cartFromLocal ? JSON.parse(cartFromLocal) : []
+    cartFromLocal.forEach(({
+      product,
+      quantity
+    }) => {
+      this.productsInCart.addObject(
+        new ProductInCart({
+          product: new Product(product),
+          quantity
+        })
+      );
+    })
+  }
+
+  get toPayPal() {
+    return {
+      purchase_units: [{
+        amount: {
+          breakdown: {
+            item_total: {
+              currency_code: "USD",
+              value: this.total
+            }
+          },
+          value: this.total
+        },
+        items: this.productsInCart.map(({
+          product,
+          quantity
+        }) => ({
+          name: product.name,
+          sku: product.objectID,
+          unit_amount: {
+            currency_code: "USD",
+            value: `${Math.round(product.price * 100) / 100}`
+          },
+          quantity
+        }))
+      }]
+    }
   }
 
 }
