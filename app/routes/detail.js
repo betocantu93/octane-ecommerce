@@ -18,4 +18,9 @@ export default class DetailRoute extends Route {
       )
     })
   }
+
+  setupController(controller){
+    super.setupController(...arguments);
+    controller.quantity = 1;
+  }
 }
