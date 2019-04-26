@@ -4232,6 +4232,18 @@ ember-truth-helpers@^2.1.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
+ember-web-app@^3.0.0-beta.2:
+  version "3.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/ember-web-app/-/ember-web-app-3.0.0-beta.2.tgz#59aa3032cd4107e2f1bc0b3838f1919d9cb6ccc1"
+  integrity sha512-+OGbqAylsgi3/kqT5Qlt6gJDP/jhX7VVoYq9MTnIcOzzRptGTC2MZ4mwNDpu2ZsymnigscIzK8ke8Z4AGQ7pJA==
+  dependencies:
+    broccoli-asset-rev "^3.0.0"
+    broccoli-caching-writer "^3.0.3"
+    broccoli-merge-trees "^3.0.2"
+    ember-cli-babel "^7.1.2"
+    web-app-manifest-validator "^1.0.0"
+    xmlbuilder "^10.1.1"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -5648,6 +5660,11 @@ is-accessor-descriptor@^1.0.0:
   integrity sha512-m5hnHTkcVsPfqx3AKlyttIPb7J+XykHvJP2B9bZDjlhLIoEq4XoK64Vg7boZlVWYK6LUY94dYPEE7Lh0ZkZKcQ==
   dependencies:
     kind-of "^6.0.0"
+
+is-array@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-array/-/is-array-1.0.1.tgz#e9850cc2cc860c3bc0977e84ccf0dd464584279a"
+  integrity sha1-6YUMwsyGDDvAl36EzPDdRkWEJ5o=
 
 is-binary-path@^1.0.0:
   version "1.0.1"
@@ -9190,6 +9207,13 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+web-app-manifest-validator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/web-app-manifest-validator/-/web-app-manifest-validator-1.0.0.tgz#b4265b83d527bbd2f89a217c2d49ce26b24ac204"
+  integrity sha1-tCZbg9Unu9L4miF8LUnOJrJKwgQ=
+  dependencies:
+    is-array "^1.0.1"
+
 webpack-sources@^1.1.0, webpack-sources@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.3.0.tgz#2a28dcb9f1f45fe960d8f1493252b5ee6530fa85"
@@ -9320,6 +9344,11 @@ xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
   integrity sha1-SWsswQnsqNus/i3HK2A8F8WHCtQ=
+
+xmlbuilder@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-10.1.1.tgz#8cae6688cc9b38d850b7c8d3c0a4161dcaf475b0"
+  integrity sha512-OyzrcFLL/nb6fMGHbiRDuPup9ljBycsdCypwuyg5AAHvyWzGfChJpCXMG88AGTIMFhGZ9RccFN1e6lhg3hkwKg==
 
 xmldom@^0.1.19:
   version "0.1.27"
