@@ -17,6 +17,11 @@ export default class IndexController extends Controller {
   pageSize = 20;
 
   @action
+  changeQuery(e) {
+    this.set('query', e.target.value);
+    this.set('page', 1);
+  }
+  @action
   toggleFacet(facet) {
     let found = this.facets.find(f => f === facet.queryParam);
     if (found) {

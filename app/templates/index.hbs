@@ -1,7 +1,7 @@
 <PageTitle @title="Welcome traveler" />
 
 <div class="search-input-container">
-  <Input @value={{this.query}} @placeholder="What you looking for today?" class="search-input" />
+  <Input @keyPress={{action this.changeQuery}} @placeholder="What you looking for today?" class="search-input" />
 </div>
 
 <div class="tag-facets-container">
