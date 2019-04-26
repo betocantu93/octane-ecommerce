@@ -1,8 +1,17 @@
 <div class="container">
   <div class="row my-cart">
-    <LinkTo @route="cart" class="btn btn-primary">
-      My Cart
+    {{#unless this.inIndexRoute}}
+      <a href="#" {{on "click" this.goBack}} class="back">
+        <img src="/left-arrow.svg" alt="">
+      </a>
+    {{/unless}}
+    <LinkTo @route="cart" class="btn btn-primary cart">
+      Cart
+      {{#if this.cartManager.productsInCart.length }}( {{this.cartManager.productsInCart.length}} ){{/if}} 
     </LinkTo>
   </div>
   {{outlet}}
+</div>
+<div id="snackbar" class={{if this.notificationManager.notification "show"}}>
+  {{this.notificationManager.notification}}
 </div>

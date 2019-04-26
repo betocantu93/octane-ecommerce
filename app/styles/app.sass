@@ -37,7 +37,13 @@ header
 		color: $primary
 		font-size: 3em
 .my-cart
-	justify-content: flex-end
+	justify-content: space-between
+	height: 40px
+	a
+		height: 40px
+	.btn:only-child 
+		margin-left: auto
+	
 
 @import 'pages/index'
 @import 'pages/detail'
@@ -45,4 +51,6 @@ header
 
 @import 'components/table'
 @import 'components/button'
+@import 'components/snackbar'
+@import 'components/paypal'
 

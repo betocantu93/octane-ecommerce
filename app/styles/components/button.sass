@@ -1,13 +1,32 @@
 .btn
 	border-radius: 0
 	padding: 10px
-	
+	border: 1px solid $primary
+	border-top: 0
 	outline: none
 	cursor: pointer
+	text-transform: uppercase
 
 .btn-primary
 	color: white
 	background: $primary
 	border-color: $primary
-	text-transform: uppercase
+	
 
+.back
+	
+	cursor: pointer
+	width: 100px
+	align-self: center
+	img
+		padding: 0 0 0 20px
+		height: 100%
+	@media screen and (min-width: $screen-mobile)
+		img
+			padding: 0
+
+.cart
+	display: flex
+	align-items: center
+	padding: 10px 20px 10px 20px
+	
