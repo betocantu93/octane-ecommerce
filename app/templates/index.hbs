@@ -16,7 +16,9 @@
 </div>
 
 <div class="show-more-container">
-  <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
+  {{#if this.model.length}}
+    <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
+  {{/if}}
   {{#if (gt this.listing.facets.length this.facetQuantityToShow)}}
     {{#if this.showMore}}
       <button class="btn btn-primary" {{on "click" (fn  this.toggleShowMore false)}}>show less filters</button>
