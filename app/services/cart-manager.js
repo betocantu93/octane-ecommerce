@@ -52,14 +52,13 @@ export default class CartManagerService extends Service {
   }
 
   persistToLocalStorage() {
-    let cartToPersist = this.productsInCart.map(productInCart => productInCart.toPlainObject);
-    window.localStorage.setItem('cart', JSON.stringify(cartToPersist));
+    window.localStorage.setItem('cart', JSON.stringify(this.productsInCart));
   }
 
   loadFromLocalStorage() {
     let cartFromLocal = window.localStorage.getItem('cart');
-    cartFromLocal = cartFromLocal ? JSON.parse(cartFromLocal) : []
-    cartFromLocal.forEach(({
+    let cart = cartFromLocal ? JSON.parse(cartFromLocal) : []
+    cart.forEach(({
       product,
       quantity
     }) => {

@@ -16,11 +16,12 @@ export default class ProductInCartModel {
     this.quantity = quantity;
   }
 
-  get toPlainObject() {
-    let model = {};
-    Object.keys(this.constructor.prototype).forEach(key => {
-      model[key] = Array.isArray(this[key]) || typeof this[key] !== "object" ? this[key] : this[key].toPlainObject
-    });
-    return model;
+  toJSON() {
+    let { product, quantity } = this;
+
+    return {
+      product,
+      quantity
+    }
   }
 }

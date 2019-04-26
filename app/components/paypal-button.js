@@ -21,16 +21,7 @@ export default class PaypalButtonComponent extends Component {
 
   @action
   didInsertPaypal(ele) {
-
-		if(window.paypal) {
-			this.renderPaypal(ele);
-		} else {
-			setTimeout(() => {
-				this.renderPaypal(ele);
-			}, 2500)
-		}
-    
-
+    this.renderPaypal(ele);
   }
 
   renderPaypal(ele) {
