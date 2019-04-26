@@ -47,15 +47,37 @@ export default class ListingService extends Service {
 
   @action
   async search({ query, facets: facetsFilters, page, pageSize }) {
+    
+    let parsedFilters = Array.isArray(facetsFilters) ? facetsFilters : JSON.parse(facetsFilters);
+
+    let brandFilters = parsedFilters.filter(facet => facet.split(':')[0] === "brand").map(facet => {
+      let [ type, name ] = facet.split(':');
+      return `${type}:"${name}"`
+    }).join(' OR ')
+
+    let tagFilters = parsedFilters.filter(facet => facet.split(':')[0] === "_tags").map(facet => {
+      let [ type, name ] = facet.split(':');
+      return `${type}:"${name}"`
+    }).join(' OR ')
+
+    brandFilters = brandFilters.length ? `(${brandFilters})` : brandFilters;
+    tagFilters = tagFilters.length ? `(${tagFilters})` : tagFilters;
+    let filters = "";
+
+    if(brandFilters.length && tagFilters.length) {
+      filters = `${brandFilters} AND ${tagFilters}`;
+    } else if(brandFilters.length) {
+      filters = brandFilters;
+    } else {
+      filters = tagFilters;
+    }
+
     let algoliaFilters = {
       query,
       facets: ['*'],
       page: page - 1,
       hitsPerPage: pageSize,
-			filters: facetsFilters.map(facet => {
-        let [ type, name ] = facet.split(':');
-        return `${type}:"${name}"`
-      }).join(' AND ')
+			filters
     };
 
     let results = await new Promise(resolve => {
