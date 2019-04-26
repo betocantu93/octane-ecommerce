@@ -72,6 +72,11 @@ export default class CartManagerService extends Service {
     })
   }
 
+  clear(){
+    this.productsInCart = [];
+    this.persistToLocalStorage();
+  }
+
   get toPayPal() {
     return {
       purchase_units: [{
