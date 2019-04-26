@@ -37,6 +37,7 @@ export default class CartManagerService extends Service {
   @action
   delete(productInCart) {
     this.productsInCart = this.productsInCart.reject(currentProductInCart => currentProductInCart.product.objectID === productInCart.product.objectID)
+    this.persistToLocalStorage();
   }
 
   @action
