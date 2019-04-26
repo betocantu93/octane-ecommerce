@@ -1,4 +1,9 @@
 
+.show-more-container
+	display: flex
+	justify-content: flex-end
+	button
+		margin: 8px
 .tag-facets-container
 	margin-top: 5px
 	display: flex
@@ -22,6 +27,15 @@
 			
 
 .search-input-container
+	position: relative
+	img
+		position: absolute
+		width: 100px
+		right: 0
+		top: -1px
+		opacity: .5
+		&.typing
+			opacity: 1
 	@media screen and (max-width: 1030px) 
 		padding: 8px
 	.search-input
