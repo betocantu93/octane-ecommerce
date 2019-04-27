@@ -4,7 +4,6 @@ import {
 } from '@ember/service';
 
 export default class IndexRoute extends Route {
-  @service cartManager;
   @service listing;
 
   queryParams = {
