@@ -1,0 +1,11 @@
+<a role="button" {{on "click" (fn @onClick @product)}}...attributes>
+  <article>
+    <img src={{@product.artwork.firstObject}} alt={{@product.name}}>
+    <h2>{{@product.brand}}: {{@product.name}}</h2>
+    <p>{{@product.releaseYear}}</p>
+    <p>${{@product.price}} USD</p>
+    {{#if @product.description}}
+      <p>{{@product.description}}</p>
+    {{/if}}
+  </article>
+</a>
