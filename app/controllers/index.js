@@ -54,6 +54,11 @@ export default class IndexController extends Controller {
   }
 
   @action
+  goToProduct(product) {
+    this.transitionToRoute('detail', product.objectID);
+  }
+
+  @action
   back(){
     this.set('page', this.page - 1);
   }
