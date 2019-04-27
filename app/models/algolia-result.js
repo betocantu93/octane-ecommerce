@@ -1,6 +1,6 @@
 import { tracked } from '@glimmer/tracking';
 
-export default class Facet {
+export default class AlgoliaResultModel {
   @tracked hits = [];
   @tracked total = 0;
   @tracked totalPages = 0;
