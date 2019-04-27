@@ -1,6 +1,6 @@
 import { tracked } from '@glimmer/tracking';
 
-export default class Facet {
+export default class FacetModel {
   @tracked key = "";
   @tracked name = "";
   @tracked count = 0;
