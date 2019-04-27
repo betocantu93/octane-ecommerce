@@ -9,8 +9,11 @@
 <div class="tag-facets-container">
   <ul>
     {{#each (if this.showMore this.listing.facets (take this.facetQuantityToShow this.listing.facets)) as |facet|}}
-      <Facet @facet={{facet}} @onClick={{this.toggleFacet}}
-        class={{if (in-array facet.queryParam this.facets) "active"}} />
+      <Facet 
+        @facet={{facet}} 
+        @onClick={{this.toggleFacet}}
+        class={{if (in-array facet.queryParam this.facets) "active"}} 
+      />
     {{/each}}
   </ul>
 </div>
