@@ -17,7 +17,7 @@
       <div class="row add-product-container">
         <Input @value={{this.quantity}} @type="number" @placeholder="Qty" />
         <button disabled={{unless this.quantity true}}
-          {{on "click" (action this.cartManager.add this.model this.quantity) }} class="btn btn-primary">
+          {{on "click" (fn this.cartManager.add this.model this.quantity) }} class="btn btn-primary">
           add to cart
         </button>
       </div>
