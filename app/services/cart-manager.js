@@ -52,23 +52,28 @@ export default class CartManagerService extends Service {
   }
 
   persistToLocalStorage() {
-    window.localStorage.setItem('cart', JSON.stringify(this.productsInCart));
+    if(typeof FastBoot === "undefined"){
+      window.localStorage.setItem('cart', JSON.stringify(this.productsInCart));
+    }
   }
 
   loadFromLocalStorage() {
-    let cartFromLocal = window.localStorage.getItem('cart');
-    let cart = cartFromLocal ? JSON.parse(cartFromLocal) : []
-    cart.forEach(({
-      product,
-      quantity
-    }) => {
-      this.productsInCart.addObject(
-        new ProductInCart({
-          product: new Product(product),
-          quantity
-        })
-      );
-    })
+    if(typeof FastBoot === 'undefined') {
+      let cartFromLocal = window.localStorage.getItem('cart');
+      let cart = cartFromLocal ? JSON.parse(cartFromLocal) : []
+      cart.forEach(({
+        product,
+        quantity
+      }) => {
+        this.productsInCart.addObject(
+          new ProductInCart({
+            product: new Product(product),
+            quantity
+          })
+        );
+      })
+    }
+    
   }
 
   clear(){
