@@ -21,7 +21,7 @@ export default class IndexRoute extends Route {
     }
   }
 
-  model({ query, facets, page, pageSize }) {
-    return this.listing.search({ query, facets, page, pageSize })
+  async model({ query, facets, page, pageSize }) {
+    return await this.listing.search({ query, facets, page, pageSize })
   }
 }
