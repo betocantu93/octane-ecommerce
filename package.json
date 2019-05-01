@@ -30,6 +30,7 @@
     "ember-cli-bundle-analyzer": "^0.0.5",
     "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-eslint": "^5.0.0",
+    "ember-cli-fastboot": "^2.0.4",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^2.0.0",
     "ember-cli-inject-live-reload": "^2.0.1",
@@ -54,9 +55,13 @@
     "sass": "^1.19.0"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "8.* || >= 10.* || >= 11.*"
   },
   "dependencies": {
     "algoliasearch": "^3.32.1"
-  }
+  },
+  "fastbootDependencies": [
+    "algoliasearch/lite"
+    
+  ]
 }
