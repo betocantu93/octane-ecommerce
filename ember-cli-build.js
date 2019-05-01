@@ -9,6 +9,9 @@ module.exports = function(defaults) {
     },
     'ember-composable-helpers': {
       only: ['take']
+    },
+    babel: {
+      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
     }
     // Add options here
   });
