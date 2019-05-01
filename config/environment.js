@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'octane-ecommerce',
     environment,
@@ -25,6 +25,9 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    'ember-cli-head': {
+      suppressBrowserRender: true
     },
     fastboot: {
       hostWhitelist: ['http://octane-ecommerce.surge.sh', 'https://octane-ecommerce.herokuapp.com', /^localhost:\d+$/]

@@ -7,6 +7,7 @@ import {
 } from '@ember/service';
 export default class DetailRoute extends Route {
   @service listing;
+  @service headData;
 
   async model({
     product_id
@@ -26,5 +27,11 @@ export default class DetailRoute extends Route {
   setupController(controller) {
     super.setupController(...arguments);
     controller.quantity = 1;
+  }
+
+  async afterModel(product) {
+    this.headData.set('ogDescription', `${product.brand}: ${product.name}`)
+    this.headData.set('ogTitle', `${product.brand}: ${product.name}`)
+    this.headData.set('ogArtwork', `${product.artwork[0]}`)
   }
 }

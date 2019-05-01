@@ -1,0 +1,49 @@
+{{!-- 
+  Add content you wish automatically added to the documents head
+  here. The 'model' available in this template can be populated by
+  setting values on the 'head-data' service. 
+--}}
+
+<title>{{this.model.title}}</title>
+
+
+{{#if this.model.canonicalURL}}
+  <link rel="canonical" href="http://octane-ecommerce.herokuapp.com/{{this.model.canonicalURL}}">
+  <meta property="og:url" content="http://octane-ecommerce.herokuapp.com/{{this.model.canonicalURL}}">
+  <meta name="twitter:url" content="http://octane-ecommerce.herokuapp.com/{{this.model.canonicalURL}}">
+{{else}}
+  <link rel="canonical" href={{this.model.ogURL}}>
+  <meta property="og:url" content={{this.model.ogURL}}>
+  <meta name="twitter:url" content={{this.model.ogURL}}>
+{{/if}}
+
+<meta property="og:site_name" content="Octane Ecommerce">
+
+{{#if this.model.ogTitle}}
+  <meta property="og:title" content={{this.model.ogTitle}}>
+{{else}}
+  <meta property="og:title" content={{this.model.title}}>
+{{/if}}
+
+<meta property="og:type" content="website">
+<meta property="og:image" content={{if this.model.ogArtwork this.model.ogArtwork "/logo.png"}}>
+<meta property="og:image:width" content="315">
+<meta property="og:image:height" content="315">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content={{if this.model.ogTitle this.model.ogTitle this.model.title}}>
+<meta name="twitter:image" content="/logo.png">
+
+{{#if this.model.ogDescription}}
+  <meta name="description" content="{{this.model.ogDescription}}: Find more in octane-ecommerce.herokuapp.com">
+  <meta property="og:description" content="{{this.model.ogDescription}}: Find more in octane-ecommerce.herokuapp.com">
+  <meta name="twitter:description" content="{{this.model.ogDescription}}: Find more in octane-ecommerce.herokuapp.com">
+{{else if this.model.ogTitle}}
+  <meta name="description" content="{{this.model.ogTitle}}: Find more in octane-ecommerce.herokuapp.com">
+  <meta property="og:description" content="{{this.model.ogTitle}}: Find more in octane-ecommerce.herokuapp.com">
+  <meta name="twitter:description" content="{{this.model.ogTitle}}: Find more in octane-ecommerce.herokuapp.com">
+{{else}}
+  <meta name="description" content="Octane Ecommerce: serverless Ember Octane + algolia + paypal + formspree">
+  <meta property="og:description" content="Octane Ecommerce: serverless Ember Octane + algolia + paypal + formspree">
+  <meta name="twitter:description" content="Octane Ecommerce: serverless Ember Octane + algolia + paypal + formspree">
+{{/if}}
