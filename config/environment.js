@@ -27,7 +27,7 @@ module.exports = function(environment) {
       // when it is created
     },
     fastboot: {
-      hostWhitelist: ['http://octane-ecommerce.surge.sh', /^localhost:\d+$/]
+      hostWhitelist: ['http://octane-ecommerce.surge.sh', 'https://octane-ecommerce.herokuapp.com', /^localhost:\d+$/]
     }
   };
 
