@@ -14,7 +14,9 @@ module.exports = {
   ],
   globals: {
     'ALGOLIA_INDEXES': true,
-    'paypal': true
+    'paypal': true,
+    'FastBoot': true
+
   },
   
   env: {

@@ -58,10 +58,10 @@
     "node": "8.* || >= 10.* || >= 11.*"
   },
   "dependencies": {
-    "algoliasearch": "^3.32.1"
+    "algoliasearch": "^3.32.1",
+    "fastboot-app-server": "^1.1.2-beta.1"
   },
   "fastbootDependencies": [
     "algoliasearch/lite"
-    
   ]
 }
