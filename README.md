@@ -1,7 +1,21 @@
 # octane-ecommerce
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an 100% frontend code simple Ecommerce build with Octane.
+
+Demo
+[Live Demo](https://octane-ecommerce.herokuapp.com/)
+
+Features:
+- [Ember Octane](https://octane-guides-preview.emberjs.com/release/getting-started/quick-start/)
+- [PayPal Checkout](https://developer.paypal.com/)
+- [Algolia for Storing and Querying](https://www.algolia.com/doc/guides/getting-started/how-algolia-works/)
+- [Formspree to send emails](https://formspree.io/)
+
+Resources:
+[Slides](https://docs.google.com/presentation/d/1YaG26Fj-tVjyFV8LvQJkfIH89-HYdkfHfhdRz3bC2-k/edit#slide=id.g56ccd9a7f0_0_33)
+[San Antonio Meetup Video](https://www.youtube.com/watch?v=KnkWs18V9dA&t=1123s)
+
+
 
 ## Prerequisites
 
