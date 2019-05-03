@@ -1,6 +1,6 @@
 # octane-ecommerce
 
-This is an 100% frontend code simple Ecommerce build with Octane.
+This is an 100% frontend simple, but powerful, E-Commerce built with Ember Octane.
 
 Demo
 [Live Demo](https://octane-ecommerce.herokuapp.com/)
