@@ -10,10 +10,11 @@ Features:
 - [PayPal Checkout](https://developer.paypal.com/)
 - [Algolia for Storing and Querying](https://www.algolia.com/doc/guides/getting-started/how-algolia-works/)
 - [Formspree to send emails](https://formspree.io/)
+- [FastBoot](https://ember-fastboot.com/)
 
 Resources:
-[Slides](https://docs.google.com/presentation/d/1YaG26Fj-tVjyFV8LvQJkfIH89-HYdkfHfhdRz3bC2-k/edit#slide=id.g56ccd9a7f0_0_33)
-[San Antonio Meetup Video](https://www.youtube.com/watch?v=KnkWs18V9dA&t=1123s)
+- [Slides](https://docs.google.com/presentation/d/1YaG26Fj-tVjyFV8LvQJkfIH89-HYdkfHfhdRz3bC2-k/edit#slide=id.g56ccd9a7f0_0_33)
+- [San Antonio Meetup Video](https://www.youtube.com/watch?v=KnkWs18V9dA&t=1123s)
 
 
 
