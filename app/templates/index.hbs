@@ -6,19 +6,20 @@
     class="search-input" >
   <img src="logo-algolia-nebula-blue-whitespaces.svg" class={{if this.query "typing"}} alt="algolia logo">
 </div>
-
 <div class="tag-facets-container">
   <ul>
-    {{#each (if this.showMore this.listing.facets (take this.facetQuantityToShow this.listing.facets)) as |facet|}}
-      <Facet 
-        @facet={{facet}} 
+    {{#each this.listing.facets as |facet index|}}
+      <Facet
+        @facet={{facet}}
         @onClick={{this.toggleFacet}}
-        class={{if (in-array facet.queryParam this.facets) "active"}} 
+        class={{concat
+          (if (in-array facet.queryParam this.facets) "active ")
+          (if (not this.showMore) (if (gt index this.facetQuantityToShow) "hide"))
+        }}
       />
     {{/each}}
   </ul>
 </div>
-
 <div class="show-more-container">
   {{#if this.model.length}}
     <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
