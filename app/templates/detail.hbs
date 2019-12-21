@@ -1,23 +1,23 @@
-<PageTitle @title={{concat this.model.brand ": " this.model.name}} />
+<PageTitle @title={{concat @model.brand ": " @model.name}} />
 
 <div class="column detail-container">
   <div class="row">
     <div class="gallery">
-      <img src={{this.model.artwork.[0]}} alt={{concat this.model.brand " - " this.model.name}}>
+      <img src={{@model.artwork.[0]}} alt={{concat @model.brand " - " @model.name}}>
     </div>
 
     <div class="description">
-      <p class="price">${{this.model.price}} USD</p>
-      {{#if this.model.description}}
+      <p class="price">${{@model.price}} USD</p>
+      {{#if @model.description}}
         <p>
-          {{this.model.description}}
+          {{@model.description}}
         </p>
       {{/if}}
 
       <div class="row add-product-container">
         <Input @value={{this.quantity}} @type="number" @placeholder="Qty" />
         <button disabled={{unless this.quantity true}}
-          {{on "click" (fn this.cartManager.add this.model this.quantity) }} class="btn btn-primary">
+          {{on "click" (fn this.cartManager.add @model this.quantity) }} class="btn btn-primary">
           add to cart
         </button>
       </div>

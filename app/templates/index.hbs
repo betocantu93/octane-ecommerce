@@ -1,10 +1,13 @@
 <PageTitle @title="Welcome traveler" />
-
 {{title "Octane"}}
 <div class="search-input-container">
-  <input {{on "input" this.changeQuery}} value={{this.query}} placeholder="What you looking for today?"
-    class="search-input" >
-  <img src="logo-algolia-nebula-blue-whitespaces.svg" class={{if this.query "typing"}} alt="algolia logo">
+  <input
+    value={{this.query}}
+    placeholder="What you looking for today?"
+    class="search-input"
+    {{on "input" this.changeQuery}}
+  >
+  <img src="logo-algolia-nebula-blue-whitespaces.svg" class={{if this.query "typing"}} alt="algolia" >
 </div>
 <div class="tag-facets-container">
   <ul>
@@ -21,14 +24,20 @@
   </ul>
 </div>
 <div class="show-more-container">
-  {{#if this.model.length}}
-    <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
+  {{#if @model.length}}
+    <button class="btn btn-primary" {{on "click" this.reset}}>
+      Clear filters
+    </button>
   {{/if}}
   {{#if (gt this.listing.facets.length this.facetQuantityToShow)}}
     {{#if this.showMore}}
-      <button class="btn btn-primary" {{on "click" (fn  this.toggleShowMore false)}}>show less filters</button>
+      <button class="btn btn-primary" {{on "click" (fn this.toggleShowMore false)}}>
+        show less filters
+      </button>
     {{else}}
-      <button class="btn btn-primary" {{on "click" (fn this.toggleShowMore true )}}>show more filters</button>
+      <button class="btn btn-primary" {{on "click" (fn this.toggleShowMore true)}}>
+        show more filters
+      </button>
     {{/if}}
   {{/if}}
 </div>
@@ -44,12 +53,21 @@
 </div>
 {{#if this.listing.lastResult.total}}
   <div class="pagination">
-    <button disabled={{lte this.page 1}} {{on "click" this.back}} class="btn btn-primary">
+    <button disabled={{lte this.page 1}} class="btn btn-primary" {{on "click" this.back}}>
       back
     </button>
-    <span>[ {{this.page}} | {{this.listing.lastResult.totalPages}} ]</span>
-    <button disabled={{gte this.page this.listing.lastResult.totalPages}} {{on "click" this.forward}}
-      class="btn btn-primary">
+    <span>
+      [
+      {{this.page}}
+      |
+      {{this.listing.lastResult.totalPages}}
+      ]
+    </span>
+    <button
+      disabled={{gte this.page this.listing.lastResult.totalPages}}
+      class="btn btn-primary"
+      {{on "click" this.forward}}
+    >
       next
     </button>
   </div>
