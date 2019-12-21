@@ -1,23 +1,15 @@
 import Component from '@glimmer/component';
-import {
-  inject as service
-} from '@ember/service';
-import {
-  action
-} from '@ember/object';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  scheduleOnce
-} from '@ember/runloop';
+import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { scheduleOnce } from '@ember/runloop';
 
 export default class PaypalButtonComponent extends Component {
   @service cartManager;
-  @tracked email = ""
-  @tracked name = ""
-  @tracked products = ""
-  @tracked total = ""
+  @tracked email = '';
+  @tracked name = '';
+  @tracked products = '';
+  @tracked total = '';
 
   @action
   didInsertPaypal(ele) {
@@ -30,23 +22,28 @@ export default class PaypalButtonComponent extends Component {
         return actions.order.create(this.cartManager.toPayPal);
       },
       onApprove: (data, actions) => {
-        return actions.order.capture().then((details) => {
-          this.name = details.payer.name.given_name
-          this.email = details.payer.email_address
-          this.total = details.purchase_units[0].amount.value
-					this.products = `
+        return actions.order.capture().then(details => {
+          this.name = details.payer.name.given_name;
+          this.email = details.payer.email_address;
+          this.total = details.purchase_units[0].amount.value;
+          this.products = `
 						<ul>
-							${details.purchase_units[0].items.map(({sku, name, quantity, unit_amount}) => {
-									return `<li>Product ${sku} - ${name} X ${quantity} = $${quantity * unit_amount.value} </li>`}).join(', ')
-							}
+							${details.purchase_units[0].items
+                .map(({ sku, name, quantity, unit_amount }) => {
+                  return `<li>Product ${sku} - ${name} X ${quantity} = $${quantity *
+                    unit_amount.value} </li>`;
+                })
+                .join(', ')}
 						</ul>
-					`
-          scheduleOnce('afterRender', this, () => {
-            document.formspree.submit()
-            this.cartManager.clear();
-          })
-    });
+					`;
+          scheduleOnce('afterRender', this, this.clearFormAndCart);
+        });
+      }
+    }).render(ele);
   }
-}).render(ele);
-}
+
+  clearFormAndCart() {
+    document.formspree.submit();
+    this.cartManager.clear();
+  }
 }
