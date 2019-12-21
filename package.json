@@ -30,7 +30,7 @@
     "ember-cli-bundle-analyzer": "^0.0.5",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-eslint": "^5.1.0",
-    "ember-cli-fastboot": "^2.0.4",
+    "ember-cli-fastboot": "^2.1.1",
     "ember-cli-head": "^0.4.1",
     "ember-cli-htmlbars": "^4.2.0",
     "ember-cli-inject-live-reload": "^2.0.1",
@@ -62,8 +62,8 @@
     "edition": "octane"
   },
   "dependencies": {
-    "algoliasearch": "^3.32.1",
-    "fastboot-app-server": "^1.1.2-beta.1"
+    "algoliasearch": "^3.35.1",
+    "fastboot-app-server": "v2.0.0"
   },
   "fastbootDependencies": [
     "algoliasearch",
