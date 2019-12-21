@@ -1,4 +1,4 @@
-<a role="button" {{on "click" (fn @onClick @product)}}...attributes>
+<LinkTo @route="detail" @model={{@product.objectID}}>
   <article>
     <img src={{@product.artwork.[0]}} alt={{@product.name}}>
     <h2>{{@product.brand}}: {{@product.name}}</h2>
@@ -8,4 +8,4 @@
       <p>{{@product.description}}</p>
     {{/if}}
   </article>
-</a>
+</LinkTo>

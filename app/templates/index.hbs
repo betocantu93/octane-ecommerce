@@ -31,12 +31,14 @@
     {{/if}}
   {{/if}}
 </div>
-
 <div class="product-grid">
-  {{#each this.model as |product|}}
-    <Product @product={{product}} @onClick={{this.goToProduct}} />
+  {{#each @model as |product|}}
+    <Product @product={{product}} />
   {{else}}
-    No results <button class="btn btn-primary" {{on "click" this.reset}}>Clear filters</button>
+    No results
+    <button class="btn btn-primary" {{on "click" this.reset}}>
+      Clear filters
+    </button>
   {{/each}}
 </div>
 {{#if this.listing.lastResult.total}}
