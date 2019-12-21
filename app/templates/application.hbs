@@ -1,9 +1,9 @@
-{{head-layout}}
+<HeadLayout />
 <div class="container">
   <div class="row my-cart">
     {{#unless this.inIndexRoute}}
       <a href="#" {{on "click" this.goBack}} class="back">
-        <img src="/left-arrow.svg" alt="">
+        <img src="/left-arrow.svg" alt="back to home">
       </a>
     {{/unless}}
     <LinkTo @route="cart" class="btn btn-primary cart">
